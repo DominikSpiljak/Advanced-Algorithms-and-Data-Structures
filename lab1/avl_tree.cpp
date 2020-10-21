@@ -305,6 +305,11 @@ public:
 
     void InsertElement(char key)
     {
+
+        if (tree->_tree.find(key) != tree->_tree.end())
+        {
+            return;
+        }
         if (tree->root_node)
         {
             char parent = find_parent(tree->root_node->c, key);
@@ -395,6 +400,19 @@ int main(void)
     avltree->InsertElement('E');
     avltree->InsertElement('N');
     avltree->InsertElement('Z');
+    avltree->InsertElement('M');
+    avltree->InsertElement('K');
+    avltree->InsertElement('Q');
+    avltree->InsertElement('P');
+    avltree->InsertElement('A');
+    avltree->InsertElement('L');
+    avltree->InsertElement('B');
+    avltree->InsertElement('C');
+    avltree->InsertElement('D');
+    avltree->InsertElement('E');
+    avltree->InsertElement('N');
+    avltree->InsertElement('Z');
+    avltree->InsertElement('V');
     avltree->tree->printTree();
     for (auto i : avltree->heights)
         cout << i.first << "   " << i.second << endl;
